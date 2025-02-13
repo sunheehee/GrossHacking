@@ -55,3 +55,31 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("priceButton").addEventListener("click", openImage);
     logVisitor(); // 방문자 로그 실행
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("script.js 로드 완료!"); // 스크립트 실행 확인
+
+    const dateButton = document.getElementById("dateButton");
+    const priceButton = document.getElementById("priceButton");
+
+    if (dateButton) {
+        console.log("날짜 버튼 감지됨!"); // 버튼 감지 여부 확인
+        dateButton.addEventListener("click", function() {
+            console.log("날짜 버튼 클릭됨!"); // 클릭 이벤트 감지 확인
+            window.open("https://github.com/sunheehee/GrossHacking/raw/main/KakaoTalk_20250213_221702187.png?raw=true", "_blank", "noopener,noreferrer");
+        });
+    } else {
+        console.log("❌ 날짜 버튼을 찾을 수 없음!");
+    }
+
+    if (priceButton) {
+        console.log("가격 버튼 감지됨!"); // 버튼 감지 여부 확인
+        priceButton.addEventListener("click", function() {
+            console.log("가격 버튼 클릭됨!"); // 클릭 이벤트 감지 확인
+            window.open("https://github.com/sunheehee/GrossHacking/raw/main/KakaoTalk_20250213_221702187.png?raw=true", "_blank", "noopener,noreferrer");
+        });
+    } else {
+        console.log("❌ 가격 버튼을 찾을 수 없음!");
+    }
+});
+
