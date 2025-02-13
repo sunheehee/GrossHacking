@@ -22,7 +22,7 @@
             body {
                 height: 100vh;
                 width: 100vw;
-                background-size: 100% 100%; /* 16:9 비율 적용 */
+                background-size: 100% 100%;
             }
         }
         .button-container {
@@ -46,14 +46,19 @@
             background-color: #e0e0e0;
         }
     </style>
+    <script>
+        function openImage() {
+            window.open("https://github.com/sunheehee/GrossHacking/blob/main/KakaoTalk_20250213_221702187.png?raw=true", "_blank");
+        }
+    </script>
 </head>
 <body>
     <div class="button-container">
-        <button onclick="alert('날짜 선택 화면으로 이동합니다')">날짜 선택하러 가기</button>
+        <button onclick="openImage()">날짜 선택하러 가기</button>
     </div>
     <div style="height: 20px;"></div>
     <div class="button-container">
-        <button onclick="alert('가격 선택 화면으로 이동합니다')">가격 선택하러 가기</button>
+        <button onclick="openImage()">가격 선택하러 가기</button>
     </div>
 </body>
 </html>
