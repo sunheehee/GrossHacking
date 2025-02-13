@@ -1,5 +1,5 @@
 // Google Sheets API URL (Apps Script에서 제공하는 URL 입력)
-const LOG_API_URL = "YOUR_DEPLOYED_WEB_APP_URL"; // ← 여기에 Apps Script 배포된 URL 입력
+const LOG_API_URL = "https://script.google.com/macros/s/AKfycbxU1cR5Bquj37L__KFLrFBGgNdmgtY1r8rj0mNdk4nSagv8dbk_UgOVrR70nsmeJzhG/exec"; // ← 여기에 Apps Script 배포된 URL 입력
 
 // 방문자 로그 기록 함수
 function logVisitor() {
