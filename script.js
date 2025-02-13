@@ -6,6 +6,8 @@ function logVisitor() {
 
     console.log(`✅ 방문 로그 - 시간: ${timestamp}, 유입 경로: ${referrer}, 기기: ${userAgent}`);
 
+    // 현재는 로그를 서버에 전송할 곳이 없으므로, fetch 요청을 주석 처리
+    /*
     fetch("/log", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -18,6 +20,7 @@ function logVisitor() {
     }).then(response => response.json())
       .then(data => console.log("✅ 서버 응답:", data))
       .catch(error => console.error("❌ 로그 전송 오류:", error));
+    */
 }
 
 // 버튼 클릭 로그 기록 함수
@@ -25,6 +28,8 @@ function logButtonClick(eventLabel) {
     const timestamp = new Date().toISOString();
     console.log(`✅ 버튼 클릭 - 이벤트: ${eventLabel}, 시간: ${timestamp}`);
 
+    // 현재는 로그를 서버에 전송할 곳이 없으므로, fetch 요청을 주석 처리
+    /*
     fetch("/log", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -36,6 +41,7 @@ function logButtonClick(eventLabel) {
     }).then(response => response.json())
       .then(data => console.log("✅ 서버 응답:", data))
       .catch(error => console.error("❌ 로그 전송 오류:", error));
+    */
 }
 
 // GitHub에 업로드된 이미지 URL (RAW URL 사용)
