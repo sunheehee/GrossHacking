@@ -38,20 +38,33 @@ function logButtonClick(eventLabel) {
       .catch(error => console.error("로그 전송 오류:", error));
 }
 
-// GitHub에 업로드된 이미지 URL
-const imageUrl = "https://github.com/sunheehee/GrossHacking/blob/main/KakaoTalk_20250213_221702187.png?raw=true";
+// 🚀 GitHub에서 "raw" 이미지 URL 사용
+const imageUrl = "https://raw.githubusercontent.com/sunheehee/GrossHacking/main/KakaoTalk_20250213_221702187.png";
 
-// 페이지가 로드되면 버튼 이벤트 추가 (CSP 우회)
+// 버튼 클릭 이벤트 추가
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("dateButton").addEventListener("click", function() {
-        logButtonClick("날짜 선택");
-        window.open(imageUrl, "_blank");
-    });
+    const dateButton = document.getElementById("dateButton");
+    const priceButton = document.getElementById("priceButton");
 
-    document.getElementById("priceButton").addEventListener("click", function() {
-        logButtonClick("가격 선택");
-        window.open(imageUrl, "_blank");
-    });
+    if (dateButton) {
+        dateButton.addEventListener("click", function() {
+            logButtonClick("날짜 선택");
+            console.log("날짜 선택 버튼 클릭됨!"); // 디버깅 로그
+            window.location.href = imageUrl; // 🚀 새 창이 아니라 현재 창에서 이동하도록 변경
+        });
+    } else {
+        console.error("❌ dateButton을 찾을 수 없음!");
+    }
+
+    if (priceButton) {
+        priceButton.addEventListener("click", function() {
+            logButtonClick("가격 선택");
+            console.log("가격 선택 버튼 클릭됨!"); // 디버깅 로그
+            window.location.href = imageUrl; // 🚀 새 창이 아니라 현재 창에서 이동하도록 변경
+        });
+    } else {
+        console.error("❌ priceButton을 찾을 수 없음!");
+    }
 
     // 방문자 로그 실행
     logVisitor();
