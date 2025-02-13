@@ -38,16 +38,19 @@ function logButtonClick(eventLabel) {
       .catch(error => console.error("로그 전송 오류:", error));
 }
 
+// GitHub에 업로드된 이미지 URL
+const imageUrl = "https://github.com/sunheehee/GrossHacking/blob/main/KakaoTalk_20250213_221702187.png?raw=true";
+
 // 페이지가 로드되면 버튼 이벤트 추가 (CSP 우회)
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("dateButton").addEventListener("click", function() {
         logButtonClick("날짜 선택");
-        window.open("https://github.com/sunheehee/GrossHacking/blob/main/KakaoTalk_20250213_221702187.png?raw=true", "_blank");
+        window.open(imageUrl, "_blank");
     });
 
     document.getElementById("priceButton").addEventListener("click", function() {
         logButtonClick("가격 선택");
-        window.open("https://github.com/sunheehee/GrossHacking/blob/main/KakaoTalk_20250213_221702187.png?raw=true", "_blank");
+        window.open(imageUrl, "_blank");
     });
 
     // 방문자 로그 실행
