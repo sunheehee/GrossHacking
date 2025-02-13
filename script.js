@@ -1,5 +1,5 @@
-// Google Sheets API URL (Apps Script에서 배포한 Web App URL 입력)
-const LOG_API_URL = "https://script.google.com/macros/s/AKfycbxwk6FlBlXuelIDCK_VFaR7lKI6HzqeOjBjSI-bD2i_0ppyJN-OurM6RnamN0MfN_5q/exec"; // ← 새 URL 입력!
+// Google Sheets API URL (새로운 배포 URL 입력)
+const LOG_API_URL = "https://script.google.com/macros/s/AKfycbyTHjFUvm5qq18bIWkq15wrkr6BupiI7bm9v6zjgYaYIZ0YxozQJw9lF-ydoAeoOxaj/exec"; // ← 새 URL 입력!
 
 // ✅ 방문자 로그 기록 함수
 function logVisitor() {
@@ -11,7 +11,7 @@ function logVisitor() {
 
     fetch(LOG_API_URL, {
         method: "POST",
-        mode: "cors", // CORS 허용 모드 변경
+        mode: "cors", // CORS 허용 모드
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             event: "page_visit",
@@ -45,7 +45,7 @@ function logButtonClick(eventLabel) {
 
     // ✅ 버튼 클릭 시 이미지 화면으로 이동
     const imageUrl = "https://github.com/sunheehee/GrossHacking/raw/main/KakaoTalk_20250213_221702187.png?raw=true";
-    window.open(imageUrl, "_blank");
+    window.open(imageUrl, "_blank", "noopener,noreferrer");
 }
 
 // ✅ 페이지 로드 시 실행
