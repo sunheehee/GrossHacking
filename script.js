@@ -1,10 +1,10 @@
 // Google Sheets API URL (새로운 배포 URL 입력)
-const LOG_API_URL = "https://script.google.com/macros/s/AKfycbyTHjFUvm5qq18bIWkq15wrkr6BupiI7bm9v6zjgYaYIZ0YxozQJw9lF-ydoAeoOxaj/exec"; // ← 새 URL 입력!
+const LOG_API_URL = "https://script.google.com/macros/s/AKfycbyTHjFUvm5qq18bIWkq15wrkr6BupiI7bm9v6zjgYaYIZ0YxozQJw9lF-ydoAeoOxaj/exec"; // 
 
 // ✅ 방문자 로그 기록 함수
 function logVisitor() {
     const timestamp = new Date().toISOString();
-    const referrer = document.referrer || "direct";
+    const referrer = document.referrer || "direct"; 
     const userAgent = navigator.userAgent;
 
     console.log(`✅ 방문 로그 - 시간: ${timestamp}, 유입 경로: ${referrer}, 기기: ${userAgent}`);
